@@ -23,7 +23,7 @@ var handler = function(request, response) {
       response.end("Data stored on pod " + os.hostname() + "\n");
     });
   } else {
-    var data = fileExists(dataFile) ? fs.readFileSync(dataFile, 'utf8') : "No data posted yet";
+    var data = fileExists(dataFile) ? fs.readFileSync(dataFile, 'utf8') : "Hey there! This greeting was submitted to kubia-0";
     response.writeHead(200);
     response.write("You've hit " + os.hostname() + "\n");
     response.end("Data stored on this pod: " + data + "\n");
